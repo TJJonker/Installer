@@ -1,39 +1,36 @@
-Project Overview: "Hello Installer"
-Welcome to the "Hello Installer" project! 🚀
+# Installer
+This project serves as a hello world project into installer development. The primary objective is the creation of an executable designed to read a file and display its content. Complementing this functionality is the integration of an installer, created using NSIS (Nullsoft Scriptable Install System).
 
-Introduction
-This project serves as an instructive exploration into installer development. The primary objective is the creation of an executable designed to read a file and display its content. Complementing this functionality is the integration of an installer, meticulously crafted using the versatile NSIS (Nullsoft Scriptable Install System).
+### Prerequisites
+Before using this project, ensure there are no spaces in the absolute path to the solution folder. Spaces may cause undefined behavior when building the solution.
 
-Prerequisites
-Prior to commencing this endeavor, ensure the absence of spaces in the absolute path to the solution folder. Spaces in the path may introduce unforeseen complications.
+### Building the Project
+Two command files have been provided for convenience:
 
-Building the Project
-Two command files stand at your disposal:
+- BuildDebug: Generates a Debug build without the need to open the solution in Visual Studio.
+- BuildRelease: Performs a similar function, tailored for Release mode.
+- Debug Build: Assembled without replicating the text file into the build folder, providing a distinct challenge.
 
-BuildDebug: Generates a Debug build without necessitating the opening of the solution in Visual Studio.
-BuildRelease: Performs a similar function, tailored for Release mode.
-Debug Build: Constructed without replicating the text file into the build folder, presenting an intriguing puzzle.
+Release Build: This refined variant, inclusive of the text file and the .nsi file, is located within the build folder, residing in the 'bin' directory.
 
-Release Build: This variant, replete with the text file and the elusive .nsi file, resides within the build folder. Locate this assembly within the 'bin' directory.
+### NSIS Integration
+The .nsi file, analogous to a script, awaits compilation within the NSIS compile tool, resulting in the creation of an installer.
 
-NSIS Integration
-The .nsi file, akin to an artisan's script, awaits compilation within the NSIS compile tool. Witness its metamorphosis into a formidable installer.
+### Desktop Deployment
+Initiating the installer prompts the creation of a Desktop directory named 'Hello.' Within this directory:
 
-Desktop Deployment
-Launching the installer for the inaugural time instigates the creation of a Desktop entity—behold the 'Hello' folder! Within its precinct:
+- Hello.exe: The foundational executable.
+- Hello.txt: The associated text file.
+- Hello_Uninstaller.exe: A utility for the orderly reversal of the installation.
+ 
+### Overwriting
+A divergence arises if the Desktop already hosts a 'Hello' folder. A window inquires: "Overwrite or abstain?" The decision rests with the user.
 
-Hello.exe: The executable at the project's core.
-Hello.txt: The enigmatic text file.
-Hello_Uninstaller.exe: A potent tool for the reversal of the installation.
-Choices Unveiled
-A divergence in the narrative arises if the Desktop already hosts a 'Hello' folder. A mysterious window materializes, inquiring: "Overwrite or abstain?" The decision rests with you.
+- Overwrite: Witness the folder's re-establishment, its contents replaced.
+- Not Overwrite: A brief acknowledgment, concluding with the installer's graceful exit.
 
-Overwrite: Witness the folder's rebirth, its contents ablaze.
-Not Overwrite: A fleeting spectacle, a nod of acknowledgment, concluding with the installer's graceful exit.
-Farewell Protocol
-Uninstallation is a straightforward endeavor—execute the 'Hello_Uninstaller.exe,' and observe the unraveling of the enchantment.
+### Uninstalling
+Uninstallation is straightforward—execute 'Hello_Uninstaller.exe' to observe the orderly unraveling of the installation.
 
-Registry Manifest
-Within the esoteric confines of the registry, the variable 'StudentNumber' in 'SOFTWARE\Configuration2023\Project4' undergoes modification upon installation, only to be expunged upon the subsequent uninstallation.
-
-May your journey with the "Hello Installer" be as enthralling as the installer itself! 🌟
+### Registry Manifest
+Within the registry, the variable 'StudentNumber' in 'SOFTWARE\Configuration2023\Project4' undergoes modification upon installation, only to be expunged during subsequent uninstallation.
